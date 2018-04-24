@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Ingest Profiles API Sample: Create Custom Dynamic Delivery Profile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/source-code-pro" type="text/css"/>
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+  <section class="bcls-section">
+  <h2 id="app">The app</h2>
+
+  <fieldset>
+    <legend>Inputs</legend>
+
+    <p>Account id: <input id="account_id_input" type="text" placeholder="1752604059001" /></p>
+
+    <p>Client id: <input id="client_id_input" type="text" size="60" placeholder="c5d0a622-5479-46d8-8d8a-5f034b943fab" /></p>
+
+    <p>Client secret: <input id="client_secret_input" type="text" size="60" placeholder="w7NQYu0vUloM4GYYy2SXAxrvyFpt8fwI35qAFZcS13-VIgs0itwKNsAwHOS80sOWKJ1BUwHIvSFG" /></p>
+
+    <p>Name for the profile (must be unique in the account): <input id="profile_name_input" type="text" size="50" /></p>
+
+    <p>Description for the profile: <input id="profile_description_input" type="text" size="80" /></p>
+
+    <p>Digital master:</p>
+
+    <p><input id="archive_master_input" type="checkbox" checked="checked" />&nbsp; <label for="archive_master_input">Archive the master</label></p>
+
+    <p><input id="distribute_master_input" type="checkbox" checked="checked" />&nbsp; <label for="distribute_master_input">Distribute the master</label></p>
+
+    <p>Images:</p>
+
+    <p><input id="capture_images_input" type="checkbox" checked="checked" />&nbsp; <label for="captureImages">Set up image renditions for image capture</label></p>
+
+    <table id="imageSizes">
+      <thead>
+        <tr>
+          <th style="padding:.5em;">Poster</th>
+          <th style="padding:.5em;">Thumbnail</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td style="padding:.5em;">Poster width: <input id="poster_width_input" type="text" value="1280" /></td>
+          <td style="padding:.5em;">Thumbnail width: <input id="thumbnail_width_input" type="text" value="160" /></td>
+        </tr>
+        <tr>
+          <td style="padding:.5em;">Poster height: <input id="poster_height_input" type="text" value="720" /></td>
+          <td style="padding:.5em;">Thumbnail height: <input id="thumbnail_height_input" type="text" value="90" /></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>Renditions to include:</p>
+
+    <div id="rendition_selector">&nbsp;</div>
+
+    <p><button id="create_profile" class="bcls-button">Create Profile</button></p>
+
+    <p>API request:</p>
+    <textarea name="api_request_display" id="api_request_display" class="bcls-code"></textarea>
+
+    <p>Full API request body:</p>
+    <textarea name="apiRequest" id="api_request_body_display" class="bcls-code"></textarea></fieldset>
+
+  <fieldset>
+    <legend>Output</legend>
+
+    <h3>Message log</h3>
+
+    <div id="logger" style="color:#F3951D;">
+      <p>Awaiting input....</p>
+    </div>
+
+    <h3>Full response</h3>
+
+    <pre class="line-numbers">
+<code id="api_response" class="language-json">Full API response will appear here...</code></pre>
+  </fieldset>
+</section>
+  
+  
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
